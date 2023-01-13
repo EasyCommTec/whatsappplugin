@@ -1,0 +1,29 @@
+﻿@model Nop.Plugin.Widgets.EasyComTecWhatsapp.Models.PublicInfoModel
+@{
+    Layout = "";
+
+}
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <style>
+        #wp {
+            right: 15px;
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 73px;
+            z-index: 100;
+        }       
+
+        .my-float {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+
+<a id="wp" href="https://api.whatsapp.com/send?phone=@Model.Phone&text=@Model.Message" target="_blank">
+    <img src="../Plugins/Widgets.EasyComTecWhatsapp/Content/wp.png">
+</a>
+

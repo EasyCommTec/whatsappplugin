@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Whatsapp",
+  "SystemName": "Widgets.EasyComTecWhatsapp",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "EasyCom Tec Team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.EasyComTecWhatsapp.dll",
+  "Description": "This plugin allows you to display Whatsapp widgets"
+}

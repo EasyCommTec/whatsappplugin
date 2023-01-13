@@ -1,0 +1,60 @@
+﻿@model Nop.Plugin.Widgets.EasyComTecWhatsapp.Models.ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+<style rel="stylesheet">
+        @@media screen and (max-width: 1650px){
+            .align-input {
+                margin-left: 15px;
+            }
+        }
+</style>
+<section class="content">
+    <div class="form-group row">
+        <div class="col-md-12 store-scope-configuration">
+            <div class="label-wrapper">
+                @await Component.InvokeAsync("StoreScopeConfiguration")
+            </div>
+        </div>
+    </div>
+    <form asp-controller="Whatsapp" asp-action="Configure" method="post">
+        <div class="card card-default">
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <div class="label-wrapper">
+                            <label class="col-form-label align-input" asp-for="Phone" asp-input="Phone">@T("Plugins.Widgets.Whatsapp.Phone")   </label>
+                            <div class="ico-help" title="@T("Plugins.Widgets.Whatsapp.Text.HelpPhone")">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="col-md-12">
+                                <nop-editor asp-for="Phone" />
+                                <span asp-validation-for="Phone"></span>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <div class="label-wrapper">
+                            <label class="col-form-label" asp-for="Message" asp-input="Message">@T("Plugins.Widgets.Whatsapp.Text")    </label>
+                            <div class="ico-help" title="@T("Plugins.Widgets.Whatsapp.Text.HelpMessage")">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="col-md-12">
+                                <nop-editor asp-for="Message" />
+                                <span asp-validation-for="Message"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class=" ">
+                <input type="submit" name="save" class=" btn bg-blue" value="@T("Admin.Common.Save")" />
+            </div>
+        </div>
+    </form>
+  
+</section>
